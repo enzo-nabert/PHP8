@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Préférence</title>
+    <link rel="stylesheet" type="text/css" href=view/view.css>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="index.php?action=readAll&controller=voiture">Liste Voitures</a>
+        <a href="index.php?action=readAll&controller=utilisateur">Liste Utilisateurs</a>
+        <a href="index.php?action=readAll&controller=trajet">Liste Trajets</a>
+        <a href="index.php?action=create&controller=voiture">Créer Voiture</a>
+        <a href="index.php?action=create&controller=utilisateur">Créer Utilisateur</a>
+        <a href="index.php?action=create&controller=trajet">Créer Trajet</a>
+        <a href="preference.html">Préférences</a>
+    </nav>
+</header>
+<main>
+    <form method="get" action="preference.php">
+        <fieldset>
+            <legend>Preferences</legend>
+            <label  for="voiture">Voiture</label>
+            <input name="preference" type="radio" id="voiture" value="ControllerVoiture">
+            <label for="user">Utilisateur</label>
+            <input name="preference" type="radio" id="user" value="ControllerUtilisateur">
+            <label for="trajet">Trajet</label>
+            <input name="preference" type="radio" id="trajet" value="ControllerTrajet">
+            <input type="hidden" name="action" value="chosen">
+            <input type="hidden" name="controller" value="preference">
+            <input type="submit" value="Valider">
+        </fieldset>
+    </form>
+</main>
+<footer>
+    <p>
+        Site de covoiturage de NABERT ENZO
+    </p>
+</footer>
+
+</body>
+</html>
